@@ -18,26 +18,13 @@
         <h3 id="enunciado" class="text-center enunciado">
           Vamos responder algumas perguntas para identificar o seu perfil de aprendizagem!
         </h3>
-        <div class="mb-5">
-          <div id="alt1" style="cursor: pointer" class="border border-white rounded w-100 p-2 my-1" onclick="altOnClick(1)">
-              Nunca.
-          </div>
+        <div id="alts" class="mb-5" animation="true" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Selecione uma alternativa!">
 
-          <div id="alt2" style="cursor: pointer" class="border border-white rounded w-100 p-2 my-1" onclick="altOnClick(2)">
-              Quase nunca.
-          </div>
-
-          <div id="alt3" style="cursor: pointer" class="border border-white rounded w-100 p-2 my-1" onclick="altOnClick(3)">
-              Quase sempre.
-          </div>
-          <div id="alt4" style="cursor: pointer" class="border border-white rounded w-100 p-2 my-1" onclick="altOnClick(4)">
-              Sempre.
-          </div>
-        </form>
+        </div>
 
         <div class="fixed-bottom p-2">
           <button id="anteriorButton" onclick="anteriorButtonOnClick();" class="btn btn-light float-left" style="display:none">Anterior</Button>
-          <button id="proximoButton" onclick="proximoButtonOnClick();" class="btn btn-primary float-right">Próximo ↳</button>
+          <button id="nextButton" onclick="nextButtonOnClick();" class="btn btn-primary float-right">Próximo ↳</button>
         </div>
       </div>
 
