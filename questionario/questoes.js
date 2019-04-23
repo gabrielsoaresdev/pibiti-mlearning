@@ -11,33 +11,9 @@ function getUserAnswers() {
         linguistica:0
       }
     },
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null},
-    {altSelected:null}
+    null, null, null, null, null, null, null, null, null,null, null,
+    null, null, null, null, null, null, null, null, null, null, null,
+    null, null, null, null, null
   ];
 }
 
@@ -52,7 +28,7 @@ function getQuestoes() {
       alt: [
         {text:"Sim", inteligencia:"intrapessoal", pontuacao:2},
         {text:"UM POUCO", inteligencia:"intrapessoal", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"intrapessoal", pontuacao:0}
       ]
     },
     {
@@ -61,7 +37,7 @@ function getQuestoes() {
         {text:"Sempre", inteligencia:"intrapessoal", pontuacao:3},
         {text:"Quase sempre",inteligencia:"intrapessoal", pontuacao:2},
         {text:"Quase nunca",inteligencia:"intrapessoal", pontuacao:1},
-        {text:"Nunca",inteligencia:null}
+        {text:"Nunca",inteligencia:"intrapessoal", pontuacao:0}
       ]
     },
     {
@@ -69,49 +45,49 @@ function getQuestoes() {
       alt: [
         {text:"Sim", inteligencia:"espacial", pontuacao:2},
         {text:"UM POUCO", inteligencia:"espacial", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"espacial", pontuacao:0}
       ]
     },
     {
       enunciado:"Você consegue ver imagens claras quando fecha meus olhos e/ou consegue imaginar ambientes/imagens com facilidade?",
       alt:[
         {text:"Sim", inteligencia:"espacial", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"espacial", pontuacao:0}
       ]
     },
     {
       enunciado:"Você consegue identificar com facilidade se um objeto cabe em determinado espaço?",
       alt:[
         {text:"Sim", inteligencia:"espacial", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"espacial", pontuacao:0}
       ]
     },
     {
       enunciado:"Consegue compreender mapas mentais e diagramas?",
       alt:[
         {text:"Sim", inteligencia:"espacial", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"espacial", pontuacao:0}
       ]
     },
     {
       enunciado:"Você gosta de fazer as coisas ouvindo música em segundo plano?",
       alt:[
         {text:"Sim", inteligencia:"musical", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"musical", pontuacao:1}
       ]
     },
     {
       enunciado:"Eu sempre tenho uma música ou o trecho de uma música na minha cabeça!",
       alt:[
         {text:"Verdadeiro", inteligencia:"musical", pontuacao:1},
-        {text:"Falso",inteligencia:null}
+        {text:"Falso",inteligencia:"musical", pontuacao:0}
       ]
     },
     {
       enunciado:"Gosto de cantar e/ou tocar algum instrumento musical!",
       alt:[
         {text:"Verdadeiro", inteligencia:"musical", pontuacao:1},
-        {text:"Falso",inteligencia:null}
+        {text:"Falso",inteligencia:"musical", pontuacao:0}
       ]
     },
     {
@@ -119,23 +95,23 @@ function getQuestoes() {
       alt:[
         {text:"Muito importante!", inteligencia:"musical", pontuacao:2},
         {text:"Importante!",inteligencia:"musical", pontuacao: 1},
-        {text:"Não é importante ou tem pouca importância!",inteligencia:null}
+        {text:"Não é importante ou tem pouca importância!",inteligencia:"musical", pontuacao:0}
       ]
     },
     {
       enunciado:"Você considera fácil relacionar-se com outra pessoa?",
       alt:[
-        {text:"Muito Fácil", inteligencia:"interpessoal", pontuacao:3},
-        {text:"Fácil",inteligencia:"interpessoal", pontuacao: 2},
-        {text:"UM POUCO COMPLICADO",inteligencia:"interpessoal", pontuacao: 1},
-        {text:"É difícil se relacionar com outras pessoas",inteligencia:null}
+        {text:"Muito Fácil.", inteligencia:"interpessoal", pontuacao:3},
+        {text:"Fácil.",inteligencia:"interpessoal", pontuacao: 2},
+        {text:"Um pouco complicado.",inteligencia:"interpessoal", pontuacao: 1},
+        {text:"É difícil se relacionar com outras pessoas.",inteligencia:"interpessoal", pontuacao:0}
       ]
     },
     {
       enunciado:"Acho fácil entender os sentimentos de outra pessoa!",
       alt:[
         {text:"Verdadeiro", inteligencia:"interpessoal", pontuacao:1},
-        {text:"Falso",inteligencia:null}
+        {text:"Falso",inteligencia:"interpessoal", pontuacao:0}
       ]
     },
     {
@@ -143,7 +119,7 @@ function getQuestoes() {
       alt:[
         {text:"Muito", inteligencia:"linguistica", pontuacao:2},
         {text:"Moderadamente, dependendo do conteúdo",inteligencia:"linguistica", pontuacao:1},
-        {text:"Não",inteligencia:null}
+        {text:"Não",inteligencia:"linguistica", pontuacao:0}
       ]
     },
     {
@@ -222,11 +198,11 @@ function getQuestoes() {
     {
       enunciado:"Analisando a sua personalidade, qual das múltiplas inteligências você considera que está mais desenvolvida?",
       alt: [
-        {text:"<span class=\"font-weight-bold\">interpessoal</span> - Habilidade em se relacionar com outras pessoas, e entender intenções, motivações e desejos de outros.", inteligencia:"interpessoal", pontuacao:5},
-        {text:"<span class=\"font-weight-bold\">intrapessoal</span> - Capacidade de se conhecer, de identificar as próprias emoções e sentimentos, utilizando esse conhecimento de maneira positiva na hora de lidar com as mais diversas situações do trabalho e do dia a dia.", inteligencia:"intrapessoal", pontuacao:5},
-        {text:"<span class=\"font-weight-bold\">musical</span> - Indivíduos que possuem essa inteligência desenvolvida gostam de estar em contato com a música. Tendem a cantar com frequência e sempre tentam tocar (ou sentem vontade de tocar) algum tipo de instrumento musical.",inteligencia:"musical", pontuacao:5},
+        {text:"<span class=\"font-weight-bold\">Interpessoal</span> - Habilidade em se relacionar com outras pessoas, e entender intenções, motivações e desejos de outros.", inteligencia:"interpessoal", pontuacao:5},
+        {text:"<span class=\"font-weight-bold\">Intrapessoal</span> - Capacidade de se conhecer, de identificar as próprias emoções e sentimentos, utilizando esse conhecimento de maneira positiva na hora de lidar com as mais diversas situações do trabalho e do dia a dia.", inteligencia:"intrapessoal", pontuacao:5},
+        {text:"<span class=\"font-weight-bold\">Musical</span> - Indivíduos que possuem essa inteligência desenvolvida gostam de estar em contato com a música. Tendem a cantar com frequência e sempre tentam tocar (ou sentem vontade de tocar) algum tipo de instrumento musical.",inteligencia:"musical", pontuacao:5},
         {text:"<span class=\"font-weight-bold\">Espacial</span> - Melhor percepção do mundo visual. Facilidade de resolver problemas espacias reais (físicos) ou imaginários: capacidade que a pessoa tem para lidar com aspectos como cor, linha, forma, figura, espaço e a relação que existe entre eles. ",inteligencia:"espacial", pontuacao:5},
-        {text:"<span class=\"font-weight-bold\">Lógico-matemática - Habilidade em desenvolver cálculos e resolver questões de lógica. Habilidade para o raciocínio dedutivo e para solucionar problemas matemáticos.",inteligencia:"logico", pontuacao:5},
+        {text:"<span class=\"font-weight-bold\">Lógico-matemática</span> - Habilidade em desenvolver cálculos e resolver questões de lógica. Habilidade para o raciocínio dedutivo e para solucionar problemas matemáticos.",inteligencia:"logico", pontuacao:5},
         {text:"<span class=\"font-weight-bold\">Físico-sinestésica</span> - Maior capacidade em controlar movimentos do corpo. Predominante em atores, dançarinos e atletas.",inteligencia:"fisico", pontuacao:5},
         {text:"<span class=\"font-weight-bold\">Linguística</span> - Maior domínio de idiomas e das palavras. Presente em escritores, podetas e linguistas.",inteligencia:"linguistica", pontuacao:5}
       ]
@@ -241,10 +217,10 @@ function getQuestoes() {
     {
       enunciado:"Eu aprendo melhor: ",
       alt:[
-        {text:"Utilizando mapas mentais", inteligencia:"espacial", pontuacao:2},
-        {text:"Utilizando música", inteligencia:"musical", pontuacao:2},
-        {text:"Fazendo resumo escrito do conteúdo", inteligencia:"linguistica", pontuacao:2},
-        {text:"Prefiro, semper que possível, resolver exercícios relacionados ao conteúdo;", inteligencia:"logico", pontuacao:2}
+        {text:"Utilizando mapas mentais.", inteligencia:"espacial", pontuacao:2},
+        {text:"Utilizando música.", inteligencia:"musical", pontuacao:2},
+        {text:"Fazendo resumo escrito do conteúdo.", inteligencia:"linguistica", pontuacao:2},
+        {text:"Prefiro, semper que possível, resolver exercícios relacionados ao conteúdo.", inteligencia:"logico", pontuacao:2}
       ]
     }
   ];

@@ -1,6 +1,7 @@
 var questNum = 0;
 var questoes;
 var userAnswers;
+var altSelected;
 
 jsonLocalStorage = window.localStorage.getItem('userAnswers');
 if(jsonLocalStorage == null) {
@@ -16,19 +17,23 @@ else {
 }
 
 function gerarPergunta() {
+  altSelected = null;
   $(enunciado).text(questoes[questNum].enunciado);
   var alternativas = "";
   for(i = 0; i < questoes[questNum].alt.length; i++) {
     alternativas += "<div id=\"alt" + i + "\" style=\"cursor: pointer\" class=\"border border-white rounded w-100 p-2 my-1\" onclick=\"altOnClick("+i+")\">"+questoes[questNum].alt[i].text+"</div>"
   }
   $(alts).html(alternativas);
+  if(userAnswers[questNum] != null) {
+    altOnClick(userAnswers[questNum]);
+  }
 }
 
 function altOnClick(id) {
   $(alts).popover('hide');
-  $("#alt"+userAnswers[questNum].altSelected).removeClass('bg-white text-success');
+  $("#alt"+altSelected).removeClass('bg-white text-success');
   $("#alt"+id).addClass('bg-white text-success');
-  userAnswers[questNum].altSelected = id;
+  altSelected = id;
 }
 
 function nextButtonOnClick() {
@@ -38,17 +43,21 @@ function nextButtonOnClick() {
     gerarPergunta();
     $(iconQuest).show();
   }
-  else if(questNum > 0 && userAnswers[questNum].altSelected != null){
+  else if(questNum > 0 && altSelected != null){
+    //Salva a atual
     salvar();
 
+    //Passa para a proxima
     questNum++;
+
     if(questNum == 2) {
       $(anteriorButton).show();
     }
-    if(questNum >= questoes.length - 1) {
-      console.log("HELLO");
+
+    if(questNum >= questoes.length) {
       $(nextButton).text("FINALIZAR");
       $(nextButton).on("click", function() {
+        questNum--;
         salvar();
         window.location.replace("../index.html");
       });
@@ -56,13 +65,14 @@ function nextButtonOnClick() {
     else
       gerarPergunta();
   }
-  else if(userAnswers[questNum].altSelected == null) {
+  else if(altSelected == null) {
+    //Se o usuario não marcou nenhuma alternativa
     $(alts).popover('show');
   }
 }
 
 function anteriorButtonOnClick() {
-  if(questNum >= questoes.length - 2) {
+  if(questNum >= questoes.length - 1) {
     $(nextButton).text("Próximo ↳");
     $(nextButton).on("click", nextButtonOnClick());
   }
@@ -73,10 +83,17 @@ function anteriorButtonOnClick() {
 }
 
 function salvar() {
-  var alternativa = userAnswers[questNum].altSelected;
-  var inteligenciaDaQuestao = questoes[questNum].alt[alternativa].inteligencia;
+  var inteligenciaDaQuestao = questoes[questNum].alt[altSelected].inteligencia;
+  if(userAnswers[questNum] != null) {
+    var inteligenciaDaQuestaoAnterior = questoes[questNum].alt[userAnswers[questNum]];
+    userAnswers[0].inteligenciasPontuacao[inteligenciaDaQuestaoAnterior] -= questoes[questNum].[userAnswers[questNum]].pontuacao;
+  }
 
-  userAnswers[0].inteligenciasPontuacao[inteligenciaDaQuestao] += questoes[questNum].alt[alternativa].pontuacao;
+  userAnswers[questNum] = altSelected;
+  userAnswers[0].inteligenciasPontuacao[inteligenciaDaQuestao] += questoes[questNum].alt[altSelected].pontuacao;
 
-  console.log(JSON.stringify(userAnswers[0]));
+
+  console.log(questoes.enunciado);
+  console.log(JSON.stringify(userAnswers));
+  window.localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
 }
