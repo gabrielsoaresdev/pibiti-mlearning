@@ -140,6 +140,11 @@ p#cake {
     background-color: rgba(211, 33, 33, 0.9);
 }
 
+.correctLine {
+    border-color: rgba(0, 163, 49, 0.9);
+    background-color: rgba(0, 163, 49, 0.9);
+}
+
 p#displayText {
     opacity: 0;
     color: black;

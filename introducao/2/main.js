@@ -99,12 +99,12 @@ function animLines() {
     setTimeout(() => {
         lines[i_numLine].className += " lineInFocus";
         setTimeout(() => {
-            lines[i_numLine].className = "paper-line";
+            lines[i_numLine].className = "paper-line correctLine";
             i_numLine++;
             if(i_numLine <= 7) {
-                animLines()
+                animLines();
             }
-        }, 500);
+        }, 450);
     }, 150);
 }
 
