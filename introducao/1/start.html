@@ -77,7 +77,7 @@
           <h3 class="text-center main-text">
             A seguir, veremos mais alguns conceitos básicos essenciais!<br><span class="font-weight-bold">Vamos aos estudos!</span>
           </h3>
-          <button id="nextButton" onclick="nextButtonOnClick();" class="btn btn-primary">Próxima Etapa ↳</button>
+          <button id="nextButton" onclick="location.replace('../2/start.html');" class="btn btn-primary">Próxima Etapa ↳</button>
         </div>
       </div>
 
@@ -101,36 +101,6 @@
   </body>
 </html>
 
-<script type="text/javascript">
-  var carouselControlPositionY = ($(document).height()/2) - ($('.carousel-control-btn').height()/2);
-  $('.carousel-control-btn').css({'position':'fixed', 'top':carouselControlPositionY});
 
-  for(i = 0; i < $('.carousel-item').length; i++) {
-    var roundImgPositionY = ($(document).height()/2) - ($('#slide'+i).height()/2);
-    $('#slide'+i).css({'position':'fixed', 'top':roundImgPositionY});
-  }
-
-  $(".carousel-control-next-icon").click(function (){
-    var slideAtual = $('div.active').index() + 2;
-    $('.progress-bar').css('width', ((slideAtual*100)/($('.carousel-item').length)) + "%");
-    $('.carousel-control-prev-icon').show();
-    if(slideAtual >= $('.carousel-item').length) {
-      $('.carousel-control-next-icon').hide();
-    }
-  });
-
-  $('.carousel-control-prev-icon').click(function (){
-    var slideAtual = $('div.active').index() - 1;
-    $('.progress-bar').css('width', ((slideAtual*100)/($('.carousel-item').length)) + "%");
-
-    if(slideAtual == 0)
-      $('.carousel-control-prev-icon').hide();
-    else {
-      $('.carousel-control-next-icon').show();
-    }
-  });
-
-  function nextButtonOnClick() {
-    location.replace('../2/start.html');
-  }
+<script type="text/javascript" src="../algoritmocarousel.js">
 </script>
