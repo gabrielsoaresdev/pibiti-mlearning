@@ -1,3 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css" >
+  </head>
+
+  <body class="text-white" style="background-color: blue; height: 100%;">
+
+    <div id="carouselConteudo" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div class="progress fixed-bottom m-3">
+        <div class="progress-bar" role="progressbar"></div>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" id="slide0">
+          <h3 class="text-center info-text">
+            Algoritmo? Essa palavra parece bem diferente do normal, mas no contexto do mundo da computação em si, é mais que uma simples palavra. Algoritmo significa um conjunto regras, raciocínios ou operações finitas, que, em uma determinada ordem, busca solucionar um problema.
+          </h3>
+        </div>
+
+        <div class="carousel-item" id="slide1">
+            <div id="info" class="inform hidden">
+                <div id="paper" class="hidden">
+                    <p id="cake">🎂</p>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                    <span class="paper-line"></span>
+                </div>
+            </div>
+            <h3 class="text-center info-text">
+            Podemos fazer uma comparação com uma receita bolo. Uma receita de bolo busca, a partir de uma lista de ações, colocadas em uma certa sequência, criar um bolo. Se seguida corretamente, o resultado será um bolo.
+            </h3>
+        </div>
+        <div class="carousel-item" id="slide2">
+          <img class="card rounded-circle w-50 mx-auto round-img" src="../../img/icon-monitor.png">
+          <h3 class="text-center info-text">
+            Esse bolo pode ser de um certo sabor, de um certo tamanho, com uma certa cobertura, mas todas essas preferências devem seguir em uma ordem correta para que no final se obtenha o bolo pronto.
+          </h3>
+        </div>
+        <div class="carousel-item" id="slide3">
+          <img class="card rounded-circle w-50 mx-auto round-img" src="../../img/icon-windows.png">
+          <h3 class="text-center info-text">
+            Voltando ao pensamento do algoritmo no mundo da computação, o algoritmo seria uma série de linhas de código que busca solucionar um problema, que no final, resultará em um software, como visto na seção de \"O que é um algoritmo.\".
+          </h3>
+        </div>
+        <div class="carousel-item text-center" id="slide4">
+          <h3 class="text-center info-text">
+            Parabéns! Você concluiu a seção 2 da introdução!
+          </h3>
+          <button id="nextButton" onclick="location.replace('../2/start.html');" class="btn btn-primary">Próxima Etapa ↳</button>
+        </div>
+      </div>
+      <a class="carousel-control carousel-control-prev" href="#carouselConteudo" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon carousel-control-btn" style="display: none" aria-hidden="true" onclick="verifySlide(false);"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control carousel-control-next" href="#carouselConteudo" role="button" data-slide="next">
+        <span class="carousel-control-next-icon carousel-control-btn" aria-hidden="true" onclick="setTimeout(() => verifySlide(true), 1000)"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+<script type="text/javascript" src="../algoritmocarousel.js">
+</script>
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -43,3 +129,4 @@
         <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
+-->
