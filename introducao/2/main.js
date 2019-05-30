@@ -1,51 +1,33 @@
 var slideIndex = 0;
 
-function init(){
-    moveButton();
-    document.getElementById('infoContent').className = "inform";
-    document.getElementById('infoContent').style.height = "fit-content";
-    document.getElementById('buttonContainer').className += " alreadyInit";
-    document.getElementById('subDivide-content').className = "";
-    btn_comecar.onclick = () => { nextText() };
-    nextText();
-}
-
 function showRecipe() {
-    let info = document.getElementById('info');
     let paper = document.getElementById('paper');
     
+    paper.style.marginTop = "0px";
+
+    document.getElementById('cake').style.opacity = "1";
     setTimeout(() => {
-        paper.className = "";
-        paper.style.height = "150px !important";
-        info.style.height = "fit-content";
         setTimeout(() => {
-            paper.style.opacity = "1";
-            setTimeout(() => {
-                paper.style.marginTop = "0px";
-                setTimeout(() => {
-                    animLines();
-                }, 750);
-            }, 50);
-        }, 100);
-    }, 500);
+            animLines();
+        }, 450);
+    }, 50);
 }
 
-function delRecipe() {
-    let info = document.getElementById('info');
-    let paper = document.getElementById('paper');
-
+function resetRecipe() {
     let lines = document.getElementsByClassName('paper-line correctLine');
 
-    paper.style.opacity = "0";
-    setTimeout(() => {
-        info.className += " hidden";
-        setTimeout(() => {
-            for(let i = 0; i < lines.length; i++) {
-                lines[i].className = "paper-line";
-                i--;
-            }
-        }, 500);
-    }, 500);
+    if(lines.length == 0) {
+        lines = document.getElementsByClassName('paper-line lineInFocus');
+    }
+
+    if(lines.length == 0) {
+        return;
+    }
+
+    for(let i = 0; i < lines.length; i++) {
+        lines[i].className = "paper-line";
+        i--;
+    }
 
     i_numLine = 0;
 }
@@ -60,7 +42,7 @@ function animLines() {
     }
 
     setTimeout(() => {
-        lines[i_numLine].className += " lineInFocus";
+        lines[i_numLine].className = "paper-line lineInFocus";
         setTimeout(() => {
             lines[i_numLine].className = "paper-line correctLine";
             i_numLine++;
@@ -83,17 +65,11 @@ function verifySlide(next) {
 }
 
 function verifyAnim() {
-    let info = document.getElementById('info');
-    let paper = document.getElementById('paper');
+    resetRecipe();
 
-    if(slideIndex === 1) {
-        info.className = "";
-        paper.className = "";
+    if(slideIndex === 2) {
         setTimeout(() => {
             showRecipe();
         }, 250);
-    }
-    else {
-        delRecipe();
     }
 }

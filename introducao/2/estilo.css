@@ -47,8 +47,7 @@ div#paper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
-    background-color: rgba(111, 111, 111, 0.03);
+    background-color: white;
     margin-top: 15px;
 }
 
@@ -61,37 +60,60 @@ p#cake {
     margin-left: 10%;
     color: white;
     font-size: 2em;
+    opacity: 0;
 }
 
-#slide1 {
+#slide2 {
     height: 100% !important;
     top: 0 !important;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     opacity: 0;
 }
 
-#slide1.active {
+#slide2.carousel-item {
+    display: none;
+}
+
+#slide2.carousel-item.active {
     display: flex;
     opacity: 1;
+}
+
+#slide2.carousel-item div#paper, #slide2.carousel-item div#info {
+    display: none;
+}
+
+#slide2.carousel-item.active div#paper, #slide2.carousel-item.active div#info {
+    display: flex;
+    opacity: 1;
+}
+
+#slide2.carousel-item.active div#paper {
+    height: 150px;
+}
+
+#slide2.carousel-item.active div#info {
+    height: fit-content;
 }
 
 .paper-line {
     border: 1.5px solid white;
     border-radius: 20%;
-    background-color: black;
     width: 80%;
     margin: 3.5px;
     margin-left: 10%;
+    opacity: 0;
 }
 
-.lineInFocus {
+.paper-line.lineInFocus {
+    opacity: 1;
     border-color: rgba(211, 33, 33, 0.9);
     background-color: rgba(211, 33, 33, 0.9);
 }
 
-.correctLine {
+.paper-line.correctLine {
+    opacity: 1;
     border-color: rgba(0, 163, 49, 0.9);
     background-color: rgba(0, 163, 49, 0.9);
 }
