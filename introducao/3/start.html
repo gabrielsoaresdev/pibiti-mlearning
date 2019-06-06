@@ -7,6 +7,30 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <style>
+      body {
+        transition: linear all 1s;
+        -webkit-transition-delay: 1s;
+        transition-delay: 0.1s;
+      }
+      #animacaoPessoasConversando  {
+        background-image: url("../../img/sprites/conversa-idioma.png");
+        width: 300px;
+        height: 300px;
+        -webkit-animation: ciclo-animacao 10.0s steps(15) ;
+        animation: ciclo-animacao 10.0s steps(15);
+      }
+      @-webkit-keyframes ciclo-animacao {
+        from { background-position: 0px; }
+        to { background-position: -4500px; }
+      }
+      @Keyframes ciclo-animacao {
+        from { background-position: 0px; }
+        to { background-position: -4500px; }
+      }
+    </style>
+
   </head>
 
   <body class="text-white" style="background-color: #010078; height: 100%;">
@@ -33,10 +57,10 @@
         </div>
 
         <div class="carousel-item" id="slide2">
-          <img class="card rounded-circle w-75 mx-auto round-img" src="">
           <h3 class="text-center">
             É como duas pessoas que falam línguas diferentes tentando se comunicar!
           </h3>
+          <div id="animacaoPessoasConversando" class="mx-auto"></div>
         </div>
 
         <div class="carousel-item" id="slide3">
@@ -96,4 +120,35 @@
 </html>
 
 <script type="text/javascript" src="../algoritmocarousel.js">
+</script>
+<script>
+function mudarCorDoFundoPeloSlide(slideAtual) {
+  if(slideAtual == 2) {
+    $('body').css({'background':'#3D3BC4'});
+  }
+  else {
+    $('body').css({'background':'#010078'});
+  }
+}
+$(".carousel-control-next-icon").click(function (){
+  var slideAtual = $('div.active').index() + 2;
+  $('.progress-bar').css('width', ((slideAtual*100)/($('.carousel-item').length)) + "%");
+  $('.carousel-control-prev-icon').show();
+  if(slideAtual >= $('.carousel-item').length) {
+    $('.carousel-control-next-icon').hide();
+  }
+  mudarCorDoFundoPeloSlide(slideAtual - 1);
+});
+
+$('.carousel-control-prev-icon').click(function (){
+  var slideAtual = $('div.active').index() - 1;
+  $('.progress-bar').css('width', ((slideAtual*100)/($('.carousel-item').length)) + "%");
+
+  if(slideAtual == 0)
+    $('.carousel-control-prev-icon').hide();
+  else {
+    $('.carousel-control-next-icon').show();
+  }
+  mudarCorDoFundoPeloSlide(slideAtual);
+});
 </script>
