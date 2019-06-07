@@ -18,16 +18,31 @@
         background-image: url("../../img/sprites/conversa-idioma.png");
         width: 300px;
         height: 300px;
-        -webkit-animation: ciclo-animacao 10.0s steps(15) ;
-        animation: ciclo-animacao 10.0s steps(15);
+        -webkit-animation: animacaoPessoasConversando 10.0s steps(15) ;
+        animation: animacaoPessoasConversando 10.0s steps(15);
       }
-      @-webkit-keyframes ciclo-animacao {
+      @-webkit-keyframes animacaoPessoasConversando {
         from { background-position: 0px; }
         to { background-position: -4500px; }
       }
-      @Keyframes ciclo-animacao {
+      @Keyframes animacaoPessoasConversando {
         from { background-position: 0px; }
         to { background-position: -4500px; }
+      }
+      #animacaoCodigo  {
+        background-image: url("../../img/sprites/i3-errolinguagem.jpg");
+        width: 225px;
+        height: 129px;
+        -webkit-animation: animacaoCodigo 5.0s steps(9) infinite;
+        animation: animacaoCodigo 5.0s steps(9) infinite;
+      }
+      @-webkit-keyframes animacaoCodigo {
+        from { background-position: 0px; }
+        to { background-position: -2048px; }
+      }
+      @Keyframes animacaoCodigo {
+        from { background-position: 0px; }
+        to { background-position: -2048px;}
       }
     </style>
 
@@ -49,7 +64,7 @@
         </div>
 
         <div class="carousel-item" id="slide1">
-          <img class="card rounded-circle w-75 mx-auto round-img" src="">
+          <img class="card rounded-circle w-75 mx-auto round-img" src="../../img/icon_monitor_confuso.png">
           <!-- Duas pessoas de idiomas diferentes se comunicando -->
           <h3 class="text-center">
             Infelizmente, o computador não entende nosso idioma!
@@ -76,10 +91,9 @@
         </div>
 
         <div class="carousel-item" id="slide5">
-          <img class="card rounded-circle w-75 mx-auto round-img" src="../../img/icon_monitor_confuso.png">
-          <!-- Computador com interrogação -->
+          <div id="animacaoCodigo" class="mx-auto"></div>
           <h3 class="text-center">
-            Quando não seguimos a sintaxe, nosso computador não consegue entender o que escrevemos, e nosso código não é executado.
+            Quando não seguimos a sintaxe da linguagem utilizada, nosso computador não consegue entender o que escrevemos, e nosso código não é executado.
           </h3>
         </div>
 
