@@ -28,7 +28,6 @@ div#info {
     box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 20px;
-    height: 0;
 }
 
 div#infoContent {
@@ -93,8 +92,12 @@ p#cake {
     height: 150px;
 }
 
+#slide2.carousel-item div#info {
+    height: 0px;
+}
+
 #slide2.carousel-item.active div#info {
-    height: fit-content;
+    height: fit-content !important;
 }
 
 .paper-line {
