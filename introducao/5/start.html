@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./estilo.css" >
   </head>
 
   <body class="text-white" style="background-color: #035605; height: 100%;">
@@ -27,7 +28,7 @@
         <div class="carousel-item" id="slide1">
           <!--<img class="card rounded-circle w-75 mx-auto round-img" src="">-->
           <h3 class="text-center">
-            Na lógica de programação, uma variável é uma palavra-chave que pode assumir quaisquer valor em um conjunto de valores.
+            Na lógica de programação, uma variável é uma palavra-chave que pode assumir quaisquer valor em um determinado conjunto de valores.
           </h3>
         </div>
         <div class="carousel-item" id="slide2">
@@ -37,27 +38,31 @@
           </h3>
         </div>
         <div class="carousel-item" id="slide3">
-          <!--<img class="card rounded-circle w-75 mx-auto round-img" src="">-->
+          <div id="box-example1">Bolas</div>
           <h3 class="text-center">
             Para deixar mais claro, podemos pensar que uma variável é uma caixa e o tipo da variável é o que indica o que vamos colocar dentro da caixa.
           </h3>
         </div>
         <div class="carousel-item" id="slide4">
-          <!--<img class="card rounded-circle w-75 mx-auto round-img" src="">-->
+          <div id="ball-example"></div>
+          <div id="box-example2">Bolas</div>
           <h3 class="text-center">
-            Se temos uma caixa onde se coloca um certo item, como um boneco, devemos colocar estes itens nessa caixa e nenhum outro tipo, como um carrinho, que não se coloca em uma caixa de bonecos.
+            Se temos uma caixa onde se coloca um certo item, como uma bola, devemos colocar estes itens nessa caixa e nenhum outro tipo, como um carrinho, que não se coloca em uma caixa de bolas.
           </h3>
         </div>
         <div class="carousel-item" id="slide5">
-          <!--<img class="card rounded-circle w-75 mx-auto round-img" src="">-->
+          <div id="action">
+            
+            <div id="box-example3"><p>Números inteiros</p><div id="decimal-example">5,5</div></div>
+          </div>
           <h3 class="text-center">
-            Voltando para a lógica de programação, se eu crio uma variável do tipo númerico inteiro, eu poderei colocar nela somente um valor numérico que seja inteiro, nenhum mais.
+            Voltando para a lógica de programação, se criada uma variável do tipo númerico inteiro, somente valores numéricos inteiros poderão ser colocados, nenhum mais.
           </h3>
         </div>
         <div class="carousel-item" id="slide6">
           <!--<img class="card rounded-circle w-75 mx-auto round-img" src="">-->
           <h3 class="text-center">
-            Se, em uma variável, você já colocou um valor e deseja colocar outro valor, não há nenhum problema, a não ser que tente colocar um valor que não seja do tipo da variável.
+            Se em uma variável você já colocou um valor e deseja colocar outro valor, não há nenhum problema, desde que este valor não seja diferente do conjunto permitido..
           </h3>
         </div>
         <div class="carousel-item" id="slide7">
@@ -68,27 +73,27 @@
         </div>
         <div class="carousel-item text-center" id="slide8">
           <h3 class="text-center">
-            A etapa 5 está concluída!<br><span class="font-weight-bold">Vamos estudar &lsaquo;&rsaquo;!</span>
+            A etapa 5 está concluída!<br><span class="font-weight-bold">Vamos estudar!</span>
           </h3>
           <button id="nextButton" onclick="location.replace('../6/start.html');" class="btn btn-primary">Próxima Etapa ↳</button>
         </div>
       </div>
       <a class="carousel-control carousel-control-prev" href="#carouselConteudo" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon carousel-control-btn" style="display: none" aria-hidden="true"></span>
+        <span onclick="verifySlide(false);" class="carousel-control-prev-icon carousel-control-btn" style="display: none" aria-hidden="true"></span>
         <span class="sr-only">Anterior</span>
       </a>
       <a class="carousel-control carousel-control-next" href="#carouselConteudo" role="button" data-slide="next">
-        <span class="carousel-control-next-icon carousel-control-btn" aria-hidden="true"></span>
+        <span onclick="verifySlide(true);" class="carousel-control-next-icon carousel-control-btn" aria-hidden="true"></span>
         <span class="sr-only">Próximo</span>
       </a>
     </div>
 
-
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../../js/jquery.js"></script>
     <script src="../../js/popper.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="main.js"></script>
   </body>
 </html>
 
