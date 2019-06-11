@@ -29,20 +29,15 @@
         from { background-position: 0px; }
         to { background-position: -4500px; }
       }
-      #animacaoCodigo  {
-        background-image: url("../../img/sprites/i3-errolinguagem.jpg");
-        width: 225px;
-        height: 129px;
-        -webkit-animation: animacaoCodigo 5.0s steps(9) infinite;
-        animation: animacaoCodigo 5.0s steps(9) infinite;
+
+      #slide6 table {
+        font-family: Consolas;
       }
-      @-webkit-keyframes animacaoCodigo {
-        from { background-position: 0px; }
-        to { background-position: -2048px; }
-      }
-      @Keyframes animacaoCodigo {
-        from { background-position: 0px; }
-        to { background-position: -2048px;}
+      #slide6 table .code-line {
+        border-right: solid 1px;
+        font-weight: bold;
+        padding-right: 1em;
+        transition: background-color 0.5;
       }
     </style>
 
@@ -56,7 +51,6 @@
       </div>
 
       <div class="carousel-inner">
-
         <div class="carousel-item active" id="slide0">
           <h3 class="text-center">
             Como foi visto anteriormente, para que exista o software, precisamos, através de um algoritmo, dizer ao computador como tudo deverá ser executado.
@@ -91,13 +85,41 @@
         </div>
 
         <div class="carousel-item" id="slide5">
-          <div id="animacaoCodigo" class="mx-auto"></div>
           <h3 class="text-center">
-            Quando não seguimos a sintaxe da linguagem utilizada, nosso computador não consegue entender o que escrevemos, e nosso código não é executado.
+            Quando não seguimos a sintaxe da linguagem utilizada, o computador não consegue entender o que escrevemos, e nosso código não é executado.
           </h3>
         </div>
 
-        <div class="carousel-item" id="slide6">
+        <div class="carousel-item text-center" id="slide6">
+          <h4 class="text-center">
+            A seguir, temos um exemplo de código que possui um erro de sintaxe. Observe que todas as linhas, com exceção da quarta, seguem um padrão. Clique no botão e observe!
+          </h4>
+          <table id="animacaoCodigo" class="mx-auto rounded table-dark text-left">
+              <tr id="row1">
+                  <td class="code-line">1</td>
+                  <td>#fazer_bolo</td>
+              </tr>
+              <tr id="row2">
+                  <td class="code-line">2</td>
+                  <td>separarTigela();</td>
+              </tr>
+              <tr id="row3">
+                  <td class="code-line">3</td>
+                  <td>addFarinha(3);</td>
+              </tr>
+              <tr id="row4">
+                  <td class="code-line">4</td>
+                  <td>add ingredientes</td>
+              </tr>
+              <tr id="row5">
+                  <td class="code-line">5</td>
+                  <td>misturar();</td>
+              </tr>
+          </table>
+          <div class="btn btn-primary m-2" id="btnRun6" onclick="executarEx1(6)">Clique para executar!</div>
+        </div>
+
+        <div class="carousel-item" id="slide7">
           <img class="card rounded-circle w-75 mx-auto round-img" src="">
           <!-- Bits -->
           <h3 class="text-center">
@@ -105,7 +127,7 @@
           </h3>
         </div>
 
-        <div class="carousel-item text-center" id="slide7">
+        <div class="carousel-item text-center" id="slide8">
           <h3 class="text-center">
             Você concluiu o tópico sobre linguagens de programação! Vamos ao próximo onde falaremos um pouco sobre <br><span class="font-weight-bold">compiladores</span>!
           </h3>
@@ -124,7 +146,6 @@
       </a>
     </div>
 
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../../js/jquery.js"></script>
@@ -133,8 +154,7 @@
   </body>
 </html>
 
-<script type="text/javascript" src="../algoritmocarousel.js">
-</script>
+<script type="text/javascript" src="../algoritmocarousel.js"></script>
 <script>
 function mudarCorDoFundoPeloSlide(slideAtual) {
   if(slideAtual == 2) {
@@ -166,3 +186,4 @@ $('.carousel-control-prev-icon').click(function (){
   mudarCorDoFundoPeloSlide(slideAtual);
 });
 </script>
+<script type="text/javascript" src="code-animation.js"></script>
