@@ -1,0 +1,85 @@
+body {
+  transition: linear all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 0.1s;
+}
+#animacaoPessoasConversando  {
+  background-image: url("../../img/sprites/conversa-idioma.png");
+  width: 300px;
+  height: 300px;
+  -webkit-animation: animacaoPessoasConversando 10.0s steps(15) ;
+  animation: animacaoPessoasConversando 10.0s steps(15);
+}
+@-webkit-keyframes animacaoPessoasConversando {
+  from { background-position: 0px; }
+  to { background-position: -4500px; }
+}
+@Keyframes animacaoPessoasConversando {
+  from { background-position: 0px; }
+  to { background-position: -4500px; }
+}
+
+#slide6 table {
+  font-family: Consolas;
+}
+#slide6 table .code-line {
+  border-right: solid 1px;
+  font-weight: bold;
+  padding-right: 1em;
+  transition: background-color 0.5;
+}
+
+/* slide 7 */
+#compilador {
+  background-color: #d3d3d3;
+}
+#animacaoCompilador {
+  font-family: Consolas;
+  color: black;
+  font-weight: bold;
+  width: 40px;
+}
+
+#animacaoCompilador #saida {
+  color: green;
+}
+
+#compilador div {
+  background-color: black;
+  border-top: 16px solid #F8A800;
+  border-right: 16px solid #E85908;
+  border-bottom: 16px solid #F50A85;
+  border-left: 16px solid #400458;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.entrada, .saida {
+  position: relative;
+  font-size:30pt;
+  top: 50%;
+}
+.entrada {
+  animation: entradaAnimacao 4s linear infinite;
+  color: white;
+}
+.saida {
+  animation: saidaAnimacao 4s linear infinite;
+  color: #26D815;
+}
+
+@keyframes entradaAnimacao {
+  0% {left: 0%;}
+  50%  {left: 50%;}
+  100% {left: 50%;}
+}
+
+@keyframes saidaAnimacao {
+  0% {left: 39%;}
+  50%  {left: 40%;}
+  100% {left: 100%;}
+}

@@ -7,39 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-
-    <style>
-      body {
-        transition: linear all 1s;
-        -webkit-transition-delay: 1s;
-        transition-delay: 0.1s;
-      }
-      #animacaoPessoasConversando  {
-        background-image: url("../../img/sprites/conversa-idioma.png");
-        width: 300px;
-        height: 300px;
-        -webkit-animation: animacaoPessoasConversando 10.0s steps(15) ;
-        animation: animacaoPessoasConversando 10.0s steps(15);
-      }
-      @-webkit-keyframes animacaoPessoasConversando {
-        from { background-position: 0px; }
-        to { background-position: -4500px; }
-      }
-      @Keyframes animacaoPessoasConversando {
-        from { background-position: 0px; }
-        to { background-position: -4500px; }
-      }
-
-      #slide6 table {
-        font-family: Consolas;
-      }
-      #slide6 table .code-line {
-        border-right: solid 1px;
-        font-weight: bold;
-        padding-right: 1em;
-        transition: background-color 0.5;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
 
   </head>
 
@@ -51,7 +19,23 @@
       </div>
 
       <div class="carousel-inner">
-        <div class="carousel-item active" id="slide0">
+
+        <div class="carousel-item active text-center" id="slide7">
+          <div id="animacaoCompilador" class="rounded w-100 p-4 text-left">
+            <span class="entrada">A</span>
+            <span class="saida">011</span>
+            <div id="compilador" class="text-center rounded mx-auto p-2 bg-secondary text-dark">
+              <span>Compilador</span>
+              <div id="compiladorLoader" class="mx-auto rounded-circle p-5"></div>
+            </div>
+          </div>
+
+          <h3 class="text-center">
+            Depois que o algoritmo está escrito, o código será interpretado/compilado, transformando tudo em linguagem de máquina, que poderá ser processado pelo computador.
+          </h3>
+        </div>
+
+        <div class="carousel-item" id="slide0">
           <h3 class="text-center">
             Como foi visto anteriormente, para que exista o software, precisamos, através de um algoritmo, dizer ao computador como tudo deverá ser executado.
           </h3>
@@ -119,13 +103,7 @@
           <div class="btn btn-primary m-2" id="btnRun6" onclick="executarEx1(6)">Clique para executar!</div>
         </div>
 
-        <div class="carousel-item" id="slide7">
-          <img class="card rounded-circle w-75 mx-auto round-img" src="">
-          <!-- Bits -->
-          <h3 class="text-center">
-            Depois que o algoritmo está escrito, o código será interpretado/compilado, transformando tudo em linguagem de máquina, que poderá ser processado pelo computador.
-          </h3>
-        </div>
+
 
         <div class="carousel-item text-center" id="slide8">
           <h3 class="text-center">
@@ -187,3 +165,4 @@ $('.carousel-control-prev-icon').click(function (){
 });
 </script>
 <script type="text/javascript" src="code-animation.js"></script>
+<script type="text/javascript" src="compilador-animation.js"></script>
