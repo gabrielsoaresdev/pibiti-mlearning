@@ -27,22 +27,22 @@ function verifySlide(next) {
 
 function verifyAnim() {
 
-    if(slideIndex === 4 || slideIndex === 2) {
+    if(slideIndex === 5 || slideIndex === 3) {
         setTimeout(() => {
             resetAnimFadeBox();
         }, 200);
     }
-    else if(slideIndex === 3) {
+    else if(slideIndex === 4) {
         setTimeout(() => {
             animFadeBox();
         }, 250);
     }
-    else if(slideIndex === 5) {
+    else if(slideIndex === 7) {
         setTimeout(() => {
             animNum();
         }, 250);
     }
-    else if(slideIndex === 7) {
+    else if(slideIndex === 8) {
         animChangeNumber();
     }
 }
